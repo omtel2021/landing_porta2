@@ -60,7 +60,8 @@ if (isset($_POST["nombre"]) && isset($_POST["apellido"]) && isset($_POST["telefo
         $nombre = $_POST["nombre"];
         $apellido= $_POST["apellido"];
         $telefono = $_POST["telefono"];
-        $dni = $_POST["calle"];
+        $dni = $_POST["dni"];
+        $compañia=$_POST["compañia"];
        
     }
 
@@ -124,8 +125,8 @@ else{
 
 // envia datos a la base de datos
 //agregar los valore en INSERT y en VALUES
-$insert= "INSERT INTO $db_table (nombre,apellido,telefono,dni,) 
-VALUES ('$nombre','$apellido','$telefono','$dni') " ;
+$insert= "INSERT INTO $db_table (nombre,apellido,telefono,dni,compañia) 
+VALUES ('$nombre','$apellido','$telefono','$dni','$compañia') " ;
 
 //ejecutar consulta
 
